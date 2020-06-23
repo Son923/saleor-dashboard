@@ -532,3 +532,12 @@ export const useCreateMultipleVariantsData = makeQuery<
   CreateMultipleVariantsData,
   CreateMultipleVariantsDataVariables
 >(createMultipleVariantsData);
+
+export const checkExportFileStatus = gql`
+  query CheckExportFileStatus($id: ID!) {
+    exportFile(id: $id) {
+      id
+      status
+    }
+  }
+`;
